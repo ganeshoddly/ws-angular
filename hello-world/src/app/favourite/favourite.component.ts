@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-favourite',
@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavouriteComponent implements OnInit {
 
-  isFavourite:boolean;
+  @Input() isFavourite:boolean; //adds property to <favourite [isFavourite] = ?></favourite>
+                                //gets property from object from HOST component[ie APP COMP]
 
   constructor() { }
 
